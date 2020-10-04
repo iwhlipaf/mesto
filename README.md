@@ -1,7 +1,7 @@
 # Проект 4: Место
 
 Ссылка на старницу проекта.
-https://iwhlipaf.github.com/mesto/index.html
+https://github.com/iwhlipaf/mesto/index.html
 
 ### Обзор
 
