@@ -1,5 +1,8 @@
 # Проект 4: Место
 
+Ссылка на старницу проекта.
+https://iwhlipaf.github.io/mesto/index.html
+
 ### Обзор
 
 * Figma

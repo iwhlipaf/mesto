@@ -1,0 +1,18 @@
+.input-form__field2 {
+    width: 358px;
+    height: 24px;
+    border: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000000;
+    margin-top: 28px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+  @media screen and (max-width: 680px) {
+    .input-form__field2 {
+      width: 238px;
+    }
+  }
