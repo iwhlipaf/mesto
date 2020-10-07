@@ -1,6 +1,6 @@
-console.log('Hello World!');
+/*console.log('Hello World!');*/
 
-let popupOpenButton = document.querySelector('.profile__add-button');
+let popupOpenButton = document.querySelector('.profile__edit-button');
 let popupCloseButton = document.querySelector('.popup__close-button');
 let settingPopup = document.querySelector('.popup');
 let submitButton = document.querySelector('.input-form__submitbutton');

@@ -1,7 +1,7 @@
 @import url("../vendor/normalize.css");
 @import url("../fonts/inter.css");
 
-@import url("../blocks/body.css");
+@import url("../blocks/body/body.css");
 
 @import url("../page/page.css");
 @import url("../page/setwidth.css");
@@ -11,12 +11,12 @@
 
 @import url("../blocks/profile/profile.css");
 @import url("../blocks/profile/__avatar/profile__avatar.css");
-@import url("../blocks/profile/__avatar/avatar.css");
+@import url("../blocks/profile/__avatar-pic/profile__avatar-pic.css");
 @import url("../blocks/profile/__personal/profile__personal.css");
 @import url("../blocks/profile/__nameline/profile__nameline.css");
 @import url("../blocks/profile/__name/profile__name.css");
-@import url("../blocks/profile/__square/profile__square.css");
-@import url("../blocks/profile/__square/square-vector.css");
+@import url("../blocks/profile/__edit-button/profile__edit-button.css");
+@import url("../blocks/profile/__edit-button/profile__edit-vector.css");
 @import url("../blocks/profile/__career/profile__career.css");
 @import url("../blocks/profile/__add-button/profile__add-button.css");
 
