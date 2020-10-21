@@ -1,19 +1,22 @@
-.input-form__field1 {
+.input-form__fieldcareer {
     width: 358px;
-    height: 24px;
     border: 0;
     box-sizing: border-box;
-    border-bottom: 1px solid #000000;
-    margin-top: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 28px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     color: #000000;
+    padding-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  
+
   @media screen and (max-width: 680px) {
-    .input-form__field1 {
+    .input-form__fieldcareer {
       width: 238px;
     }
-  }
+  } 

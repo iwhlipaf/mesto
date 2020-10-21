@@ -1,5 +1,5 @@
 .place__placename {
-    width: 210px;
+    max-width: 210px;
     margin: 0;
     font-style: normal;
     font-weight: 900;
@@ -9,4 +9,4 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+  } 

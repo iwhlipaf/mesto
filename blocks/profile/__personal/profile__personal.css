@@ -4,3 +4,10 @@
     flex-grow: 2;
     justify-content: center;
   }
+
+  @media screen and (max-width: 680px) {
+    .profile__personal {
+      align-items: center;
+      flex-grow: 1;
+    }
+  }

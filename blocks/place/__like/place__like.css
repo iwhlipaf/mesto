@@ -1,4 +1,9 @@
 .place__like {
     width: 20.76px;
     height: 18.3px;
-  }
+}
+  
+.place__like:hover { 
+    opacity: 0.6;
+    cursor: pointer;
+    }
