@@ -1,6 +1,8 @@
 .place__like {
     width: 20.76px;
     height: 18.3px;
+    background-color: transparent;
+    border: 0;
 }
   
 .place__like:hover { 

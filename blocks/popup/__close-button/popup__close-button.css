@@ -1,7 +1,16 @@
 .popup__close-button {
     position: relative;
-    top: -190px;
-    left: -12px;
+    top: -198px;
+    left: -15px;
     border: 0;
     background-color: transparent;
-  } 
+  }
+
+  @media screen and (max-width: 680px) {
+    .popup__close-button {
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+    }
+  }

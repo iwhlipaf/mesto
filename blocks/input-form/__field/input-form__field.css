@@ -1,4 +1,4 @@
-.input-form__fieldname {
+.input-form__field {
     width: 358px;
     border: 0;
     box-sizing: border-box;
@@ -10,13 +10,10 @@
     line-height: 17px;
     color: #000000;
     padding-bottom: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   
   @media screen and (max-width: 680px) {
-    .input-form__fieldname {
-      width: 238px;
+    .input-form__field {
+      max-width: 238px;
     }
   }
