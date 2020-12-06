@@ -1,0 +1,5 @@
+.popup-fullscreen__frame {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}

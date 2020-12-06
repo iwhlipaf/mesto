@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./pages/index.css">
+  <script src="./scripts/initialArray.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto Russia</title>
 </head>
@@ -31,78 +32,57 @@
       </section>
       <section class="elements">
         <ul class="elements__places">
+          <template id="card-template">
             <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1088404-unsplash.png" alt="изображение">
+              <button type="button" class="place__delete-button"> 
+                <img src="./images/trash1.svg" alt="иконка">
+                <img src="./images/trash.svg" alt="иконка">
+              </button>
+                <img class="place__foto" src="" alt="Фото">
                 <div class="place__descript">
-                    <h2 class="place__placename">Карачаевск</h2>
-                    <button type="button" class="place__like" src="./images/like.svg" alt="иконка">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
+                    <h2 class="place__placename"></h2>
+                    <button type="button" class="place__like"></button>
                 </div> 
             </li>
-            <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1556355-unsplash.png" alt="изображение">
-                <div class="place__descript">
-                    <h2 class="place__placename">Гора Эльбрус</h2>
-                    <button type="button" class="place__like" src="./images/like.svg" alt="иконка">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
-                </div>
-            </li>
-            <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1404681-unsplash.png" alt="изображение">
-                <div class="place__descript">
-                    <h2 class="place__placename">Домбай</h2>
-                    <button type="button" class="place__like" src="./images/like.svg" alt="иконка">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
-                </div>
-            </li>
-            <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1556355-unsplash.png" alt="изображение">
-                <div class="place__descript">
-                    <h2 class="place__placename">Гора Эльбрус</h2>
-                    <button type="button" class="place__like" src="./images/like.svg" alt="иконка">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
-                </div> 
-            </li>
-            <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1404681-unsplash.png" alt="изображение">
-                <div class="place__descript">
-                    <h2 class="place__placename">Домбай</h2>
-                    <button type="button" class="place__like" src="./images/like.svg" alt="иконка">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
-                </div>
-            </li>
-            <li class="place">
-                <img class="place__foto" src="images/kirill-pershin-1088404-unsplash.png" alt="изображение">
-                <div class="place__descript">
-                    <h2 class="place__placename">Карачаево-Черкессия</h2>
-                    <button type="button" class="place__like">
-                      <img src="./images/like.svg" alt="иконка">
-                    </button>
-                </div>
-            </li>
+          </template>            
         </ul>
       </section>
     </main>
     <footer class="footer setwidth">
       <p class="footer__copyright">© 2020 Mesto Russia</p>        
     </footer>
-    <div class="popup">      
+    <div class="popup-profile">      
       <form class="input-form" name="form">
         <h3 class="input-form__header">Редактировать профиль</h3>
         <input type="text" name="input" class="input-form__field input-form__field_info_name">
         <input type="text" name="input" class="input-form__field input-form__field_info_career">
         <button type="submit" class="input-form__submitbutton">Сохранить</button>
       </form>
-      <button type="button" class=popup__close-button>
-        <img class="popup__close-icon" src="./images/CloseIcon.svg" alt="иконка">
-      </button>      
+      <button type="button" class=popup-profile__close-button>
+        <img class="popup-profile__close-icon" src="./images/CloseIcon.svg" alt="иконка">
+      </button>
+    </div>
+    <div class="popup-card">      
+      <form class="input-card" name="card">
+        <h3 class="input-card__header">Новое место</h3>
+        <input type="text" name="input" class="input-card__field input-card__field_info_place" placeholder="Название">
+        <input type="text" name="input" class="input-card__field input-card__field_info_source" placeholder="Ссылка на картинку">
+        <button type="submit" class="input-card__submitbutton">Создать</button>
+      </form>
+      <button type="button" class=popup-card__close-button>
+        <img class="popup-card__close-icon" src="./images/CloseIcon.svg" alt="иконка">
+      </button>     
+    </div>
+    <div class="popup-fullscreen">
+      <div class="popup-fullscreen__frame">
+        <button  type="button" class="popup-fullscreen__close-button"></button>
+        <div class="popup-fullscreen__foto">
+          <img class="popup-fullscreen__img" src="" alt="Фото">
+        </div>
+        <h3 class="popup-fullscreen__title"></h3>
+      </div>
     </div>
   </div>
-  <script src="./scripts/index.js"></script>
+  <script src="./scripts/index.js" defer></script>
 </body>
 </html>

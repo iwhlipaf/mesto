@@ -1,14 +1,14 @@
-.place__like {
+.place__like_liked {
     width: 20.76px;
     height: 18.3px;
     background-color: transparent;
-    background-image: url(../../../images/like.svg);
+    background-image: url(../../../../images/liked.svg);
     background-position: center center;
     background-size: cover;
     border: 0;
 }
   
-.place__like:hover { 
+.place__like_liked:hover { 
     opacity: 0.6;
     cursor: pointer;
     }

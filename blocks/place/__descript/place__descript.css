@@ -1,5 +1,5 @@
 .place__descript {
-    min-width: 282px;
+    width: 100%;
     box-sizing: border-box;
     padding: 25px 21px 31px;
     display: flex;

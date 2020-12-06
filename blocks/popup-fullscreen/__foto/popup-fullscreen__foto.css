@@ -1,0 +1,6 @@
+.popup-fullscreen__foto {
+    max-width: 75vw;
+    max-height: 75vh;
+    box-sizing: border-box;
+    padding: 0 47px;
+}

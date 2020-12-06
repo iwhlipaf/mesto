@@ -1,0 +1,9 @@
+.popup-card__close-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .popup-card__close-icon:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }

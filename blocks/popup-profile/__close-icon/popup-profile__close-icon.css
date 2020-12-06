@@ -1,9 +1,9 @@
-.popup__close-icon {
+.popup-profile__close-icon {
     width: 47px;
     height: 47px;
   }
 
-  .popup__close-icon:hover {
+  .popup-profile__close-icon:hover {
     opacity: 0.6;
     cursor: pointer;
   }

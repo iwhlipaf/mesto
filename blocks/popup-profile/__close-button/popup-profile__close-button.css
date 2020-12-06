@@ -1,4 +1,4 @@
-.popup__close-button {
+.popup-profile__close-button {
     position: relative;
     top: -198px;
     left: -15px;
@@ -7,7 +7,7 @@
   }
 
   @media screen and (max-width: 680px) {
-    .popup__close-button {
+    .popup-profile__close-button {
       position: static;
       display: flex;
       justify-content: center;

@@ -1,14 +1,12 @@
-.popup_active {
+.popup-profile_active {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto;       
   }
 
   @media screen and (max-width: 680px) {
-    .popup_active {
-      margin: 0 auto;
+    .popup-profile_active {
       flex-direction: column-reverse;
-      align-items: center;
     }
   }

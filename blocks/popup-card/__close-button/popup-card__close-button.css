@@ -1,0 +1,16 @@
+.popup-card__close-button {
+    position: relative;
+    top: -198px;
+    left: -15px;
+    border: 0;
+    background-color: transparent;
+  }
+
+  @media screen and (max-width: 680px) {
+    .popup-card__close-button {
+      position: static;
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+    }
+  }
