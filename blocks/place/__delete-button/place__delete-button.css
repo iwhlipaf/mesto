@@ -1,15 +1,14 @@
 .place__delete-button {
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 18px;
+    height: 19px;
     position: absolute;
     top: 18px;
     right: 15px;
+    background-image: url(../../../images/Trash.svg);
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
   }
 
   .place__delete-button:hover {

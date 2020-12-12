@@ -31,26 +31,22 @@
         </button>
       </section>
       <section class="elements">
-        <ul class="elements__places">
-          <template id="card-template">
-            <li class="place">
-              <button type="button" class="place__delete-button"> 
-                <img src="./images/trash1.svg" alt="иконка">
-                <img src="./images/trash.svg" alt="иконка">
-              </button>
-                <img class="place__foto" src="#" alt="Фото">
-                <div class="place__descript">
-                    <h2 class="place__placename"></h2>
-                    <button type="button" class="place__like"></button>
-                </div> 
-            </li>
-          </template>            
-        </ul>
+        <ul class="elements__places"></ul>
       </section>
     </main>
     <footer class="footer setwidth">
       <p class="footer__copyright">© 2020 Mesto Russia</p>        
     </footer>
+    <template id="card-template">
+      <li class="place">
+        <button type="button" class="place__delete-button"></button>
+          <img class="place__foto" src="#" alt="Фото">
+          <div class="place__descript">
+              <h2 class="place__placename"></h2>
+              <button type="button" class="place__like"></button>
+          </div> 
+      </li>
+    </template> 
     <div class="popup-profile">      
       <form class="input-form" name="form">
         <h3 class="input-form__header">Редактировать профиль</h3>
@@ -58,20 +54,16 @@
         <input type="text" name="input" class="input-form__field input-form__field_info_career">
         <button type="submit" class="input-form__submitbutton">Сохранить</button>
       </form>
-      <button type="button" class=popup-profile__close-button>
-        <img class="popup-profile__close-icon" src="./images/CloseIcon.svg" alt="иконка">
-      </button>
+      <button type="button" class=popup-profile__close-button></button>
     </div>
     <div class="popup-card">      
       <form class="input-card" name="card">
         <h3 class="input-card__header">Новое место</h3>
         <input type="text" name="input" class="input-card__field input-card__field_info_place" placeholder="Название">
-        <input type="text" name="input" class="input-card__field input-card__field_info_source" placeholder="Ссылка на картинку">
+        <input type="url" name="input" class="input-card__field input-card__field_info_source" placeholder="Ссылка на картинку">
         <button type="submit" class="input-card__submitbutton">Создать</button>
       </form>
-      <button type="button" class=popup-card__close-button>
-        <img class="popup-card__close-icon" src="./images/CloseIcon.svg" alt="иконка">
-      </button>     
+      <button type="button" class=popup-card__close-button></button>     
     </div>
     <div class="popup-fullscreen">
       <div class="popup-fullscreen__frame">

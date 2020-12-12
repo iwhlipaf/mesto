@@ -1,16 +1,26 @@
 .popup-profile__close-button {
     position: relative;
-    top: -198px;
-    left: -15px;
+    top: -202px;
+    left: -5px;
+    width: 47px;
+    height: 47px;
+    background-image: url(../../../images/CloseIcon.svg);
+    background-position: center center;
+    background-size: cover;
     border: 0;
     background-color: transparent;
   }
 
-  @media screen and (max-width: 680px) {
-    .popup-profile__close-button {
-      position: static;
-      display: flex;
-      justify-content: center;
-      align-self: flex-end;
-    }
+.popup-profile__close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+  .popup-profile__close-button {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
   }
+}
