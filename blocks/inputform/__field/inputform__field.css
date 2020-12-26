@@ -1,4 +1,4 @@
-.input-card__field {
+.inputform__field {
     width: 358px;
     border: 0;
     box-sizing: border-box;
@@ -13,7 +13,11 @@
   }
   
   @media screen and (max-width: 680px) {
-    .input-card__field {
+    .inputform__field {
       max-width: 238px;
     }
   }
+
+  /* .inputform__field:invalid:not(:focus):not(:placeholder-shown) {
+    border-bottom: 2px solid #ff0000;
+  } */

@@ -1,4 +1,4 @@
-.popup-card {
+.popup {
     position: fixed;
     top: 0;
     right: 0;
@@ -16,14 +16,12 @@
   }
 
 @media screen and (max-width: 680px) {
-  .popup-card {
-    margin: 0 auto;
+  .popup {
     flex-direction: column-reverse;
-    align-items: center;
   }
 }
 
-.popup-card.popup_active {
+.popup.popup_active {
   visibility: visible;
   opacity: 1;
 }

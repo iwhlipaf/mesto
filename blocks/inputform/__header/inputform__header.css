@@ -1,4 +1,4 @@
-.input-card__header {
+.inputform__header {
     max-width: 330px;
     font-style: normal;
     font-weight: 900;
@@ -10,7 +10,7 @@
   }
   
   @media screen and (max-width: 680px) {
-    .input-card__header {
+    .inputform__header {
       width:238px;
       font-size: 18px;
       line-height: 22px;

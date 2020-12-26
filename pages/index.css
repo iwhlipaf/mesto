@@ -9,6 +9,10 @@
 @import url("../blocks/header/header.css");
 @import url("../blocks/header/__logo/header__logo.css");
 
+@import url("../blocks/error/error.css");
+@import url("../blocks/error/__highline/error__highline.css");
+@import url("../blocks/error/__lowline/error__lowline.css");
+
 @import url("../blocks/profile/profile.css");
 @import url("../blocks/profile/__avatar/profile__avatar.css");
 @import url("../blocks/profile/__avatar-pic/profile__avatar-pic.css");
@@ -33,26 +37,20 @@
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__copyright/footer__copyright.css");
 
+@import url("../blocks/popup/popup.css");
+@import url("../blocks/popup/__button/popup__button.css");
 @import url("../blocks/popup/_active/popup_active.css");
 
-@import url("../blocks/popup-profile/popup-profile.css");
-@import url("../blocks/popup-profile/__close-button/popup-profile__close-button.css");
-
-@import url("../blocks/popup-card/popup-card.css");
-@import url("../blocks/popup-card/__close-button/popup-card__close-button.css");
-
-@import url("../blocks/input-form/input-form.css");
-@import url("../blocks/input-form/__header/input-form__header.css");
-@import url("../blocks/input-form/__field/input-form__field.css");
-@import url("../blocks/input-form/__submitbutton/input-form__submitbutton.css");
-
-@import url("../blocks/input-card/input-card.css");
-@import url("../blocks/input-card/__header/input-card__header.css");
-@import url("../blocks/input-card/__field/input-card__field.css");
-@import url("../blocks/input-card/__submitbutton/input-card__submitbutton.css");
+@import url("../blocks/inputform/inputform.css");
+@import url("../blocks/inputform/__header/inputform__header.css");
+@import url("../blocks/inputform/__field/inputform__field.css");
+@import url("../blocks/inputform/__field/_state/inputform__field_state_invalid.css");
+@import url("../blocks/inputform/__submitbutton/inputform__submitbutton.css");
+@import url("../blocks/inputform/__submitbutton/_state/inputform__submitbutton_state_invalid.css");
 
 @import url("../blocks/popup-fullscreen/popup-fullscreen.css");
 @import url("../blocks/popup-fullscreen/__close-button/popup-fullscreen__close-button.css");
 @import url("../blocks/popup-fullscreen/__foto/popup-fullscreen__foto.css");
 @import url("../blocks/popup-fullscreen/__frame/popup-fullscreen__frame.css");
 @import url("../blocks/popup-fullscreen/__title/popup-fullscreen__title.css");
+@import url("../blocks/popup-fullscreen/__img/popup-fullscreen__img.css");

@@ -1,7 +1,7 @@
-.popup-profile__close-button {
+.popup__button {
     position: relative;
     top: -202px;
-    left: -5px;
+    left: 232px;
     width: 47px;
     height: 47px;
     background-image: url(../../../images/CloseIcon.svg);
@@ -11,13 +11,13 @@
     background-color: transparent;
   }
 
-.popup-profile__close-button:hover {
+.popup__button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 680px) {
-  .popup-profile__close-button {
+  .popup__button {
     position: static;
     display: flex;
     justify-content: center;

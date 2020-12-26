@@ -1,4 +1,4 @@
-.input-form {
+.inputform {
     margin: 0;
     width:430px;
     padding: 0 36px;
@@ -10,10 +10,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position:fixed;
   }
   
   @media screen and (max-width: 680px) {
-    .input-form {
+    .inputform {
       width:282px;
     }
   }
