@@ -47,31 +47,31 @@
           </div> 
       </li>
     </template> 
-    <div class="popup popup__profile">      
-      <form class="inputform inputform__profile" name="form" novalidate>
+    <div class="popup popup_profile">      
+      <form class="inputform inputform_profile" name="form" novalidate>
         <h3 class="inputform__header inputform__header_title_editprofile">Редактировать профиль</h3>
         <label>
           <input id="profile-name" type="text" name="input" class="inputform__field inputform__field_info_name" required minlength="2" maxlength="40">
-          <span id="profile-name-error" class="error error__highline"></span>
+          <span id="profile-name-error" class="error error_highline"></span>
         </label>
         <label>
           <input id="profile-career" type="text" name="input" class="inputform__field inputform__field_info_career" required minlength="2" maxlength="200">
-          <span id="profile-career-error" class="error error__lowline"></span>
+          <span id="profile-career-error" class="error error_lowline"></span>
         </label>
         <button type="submit" class="inputform__submitbutton inputform__submitbutton_info_save">Сохранить</button>
       </form>
       <button type="button" class="popup__button popup__button_close_profileform"></button>
     </div>
-    <div class="popup popup__card">      
-      <form class="inputform inputform__card" name="card" novalidate>
+    <div class="popup popup_card">      
+      <form class="inputform inputform_card" name="card" novalidate>
         <h3 class="inputform__header inputform__header_title_newplace">Новое место</h3>
         <label>
           <input id="card-name" type="text" name="input" class="inputform__field inputform__field_info_place" placeholder="Название" required minlength="2" maxlength="30">
-          <span id="card-name-error" class="error error__highline"></span>
+          <span id="card-name-error" class="error error_highline"></span>
         </label>
         <label>
           <input id="card-source" type="url" name="input" class="inputform__field inputform__field_info_source" placeholder="Ссылка на картинку" required>
-          <span id="card-source-error" class="error error__lowline"></span>
+          <span id="card-source-error" class="error error_lowline"></span>
         </label>
         <button type="submit" class="inputform__submitbutton inputform__submitbutton_info_create">Создать</button>
       </form>

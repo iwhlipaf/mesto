@@ -10,8 +10,8 @@
 @import url("../blocks/header/__logo/header__logo.css");
 
 @import url("../blocks/error/error.css");
-@import url("../blocks/error/__highline/error__highline.css");
-@import url("../blocks/error/__lowline/error__lowline.css");
+@import url("../blocks/error/_highline/error_highline.css");
+@import url("../blocks/error/_lowline/error_lowline.css");
 
 @import url("../blocks/profile/profile.css");
 @import url("../blocks/profile/__avatar/profile__avatar.css");

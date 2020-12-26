@@ -1,7 +1,7 @@
 const editProfileButton = document.querySelector('.profile__edit-button');
 const closeProfilePopupButton = document.querySelector('.popup__button_close_profileform');
-const settingProfilePopup = document.querySelector('.popup__profile');
-const submitForm = document.querySelector('.inputform__profile');
+const settingProfilePopup = document.querySelector('.popup_profile');
+const submitForm = document.querySelector('.inputform_profile');
 
 const nameInput = document.querySelector('.inputform__field_info_name');
 const jobInput = document.querySelector('.inputform__field_info_career');
@@ -11,8 +11,8 @@ const profileCareer = document.querySelector('.profile__career');
 
 const addUsersCardButton = document.querySelector('.profile__add-button');
 const closeCardPopupButton = document.querySelector('.popup__button_close_cardform');
-const settingCardPopup = document.querySelector('.popup__card');
-const submitCard = document.querySelector('.inputform__card');
+const settingCardPopup = document.querySelector('.popup_card');
+const submitCard = document.querySelector('.inputform_card');
 
 const placeNameInput = document.querySelector('.inputform__field_info_place');
 const sourceFotoInput = document.querySelector('.inputform__field_info_source');
@@ -146,7 +146,7 @@ submitForm.addEventListener('submit', formSubmitHandler);
 
 //Слушатели событий карточки
 addUsersCardButton.addEventListener('click', () => {
-  document.querySelector('.inputform__card').reset();
+  document.querySelector('.inputform_card').reset();
   cleanInputError(settingCardPopup);
   openPopup(settingCardPopup);
 });
