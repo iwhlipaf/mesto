@@ -131,6 +131,15 @@ function cleanInputError(popup) {
     });
 }
 
+//функция сброса состояния кнопки добавления карточки
+function resetButtonState(popup) {
+  const submitButton = popup.querySelector('.inputform__submitbutton');
+  if(!submitButton.classList.contains('inputform__submitbutton_state_invalid')) {
+    submitButton.disabled = true;
+    submitButton.classList.add('inputform__submitbutton_state_invalid');
+  };
+}
+
 //Слушатели событий профиля
 editProfileButton.addEventListener('click', () => {
   nameInput.value = profileName.textContent;
@@ -148,6 +157,7 @@ submitForm.addEventListener('submit', formSubmitHandler);
 addUsersCardButton.addEventListener('click', () => {
   document.querySelector('.inputform_card').reset();
   cleanInputError(settingCardPopup);
+  resetButtonState(settingCardPopup);
   openPopup(settingCardPopup);
 });
 closeCardPopupButton.addEventListener('click', function() {
