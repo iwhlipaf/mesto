@@ -1,3 +1,15 @@
+import {initialCards} from './initialArray.js';
+import {Card} from './Card.js';
+import Validation from './FormValidator.js';
+
+//конфиг
+const validationConfig = {
+  inputsSelector: '.inputform__field',
+  submitButtonSelector: '.inputform__submitbutton',
+  inputInvalidClass: 'inputform__field_state_invalid',
+  buttonInvalidClass: 'inputform__submitbutton_state_invalid',
+}
+
 const editProfileButton = document.querySelector('.profile__edit-button');
 const closeProfilePopupButton = document.querySelector('.popup__button_close_profileform');
 const settingProfilePopup = document.querySelector('.popup_profile');
@@ -24,12 +36,8 @@ const placeFoto = document.querySelector('.popup-fullscreen__img');
 const placeName = document.querySelector('.popup-fullscreen__title');
 const closeImgPopupButton = document.querySelector('.popup-fullscreen__close-button');
 
-
-//заполнение из массива
-initialCards.forEach(cardInfo => {
-  const card = getCard(cardInfo);
-  placesContainer.append(card);
-});
+const validationFormAdd = new Validation(validationConfig, '.inputform_card');
+const validationFormProfile = new Validation(validationConfig, '.inputform_profile');
 
 //функция открытия окна
 function openPopup(popup) {
@@ -77,47 +85,24 @@ function cardSubmitHandler(evt) {
   closePopup(openedPopup);
 }
 
-//функция лайка карточки
-function likingCard(evt) {
-  evt.target.classList.toggle('place__like_liked');
-} 
-
-//функция удаления карточки
-function removingCard(evt) {
-  evt.target.closest('.place').remove();
-}
-
 //функция добавления карточки пользователя
 function addUsersCard() {
   const cardInfo = { 
     name: placeNameInput.value,
     link: sourceFotoInput.value
  }
-  const card = getCard(cardInfo);
-  placesContainer.prepend(card);
+  const card = new Card(cardInfo, openFullscreenImage);
+  placesContainer.prepend(card.renderCard());
 }
 
-//функция создания карточки
-function getCard(placedata) {
-  const cardsTemplate = document.querySelector('#card-template').content.cloneNode(true);
-  cardsTemplate.querySelector('.place__placename').textContent = placedata.name;
-  cardsTemplate.querySelector('.place__foto').src = placedata.link;
-  
-  const likeCard = cardsTemplate.querySelector('.place__like');
-  likeCard.addEventListener('click', likingCard);
-  
-  const deletCard = cardsTemplate.querySelector('.place__delete-button');
-  deletCard.addEventListener('click', removingCard);
-  
-  const fullscreenImg = cardsTemplate.querySelector('.place__foto');
-  fullscreenImg.addEventListener('click', function(evt) {
+//функция открытия карточки на полный экран
+function openFullscreenImage(evt) {
     const opendImg = evt.target.closest('.place');
     placeFoto.src = opendImg.querySelector('.place__foto').src;
     placeName.textContent = opendImg.querySelector('.place__placename').textContent;
     openPopup(settingImgPopup);
-  });
-  return cardsTemplate
 }
+
 
 //Функция очистки полей ввода от  ошибок после закрытии окна
 function cleanInputError(popup) {
@@ -129,15 +114,6 @@ function cleanInputError(popup) {
     inputList.forEach( input => {
        input.classList.remove('inputform__field_state_invalid');
     });
-}
-
-//функция сброса состояния кнопки добавления карточки
-function resetButtonState(popup) {
-  const submitButton = popup.querySelector('.inputform__submitbutton');
-  if(!submitButton.classList.contains('inputform__submitbutton_state_invalid')) {
-    submitButton.disabled = true;
-    submitButton.classList.add('inputform__submitbutton_state_invalid');
-  };
 }
 
 //Слушатели событий профиля
@@ -153,11 +129,11 @@ closeProfilePopupButton.addEventListener('click', () => {
 });
 submitForm.addEventListener('submit', formSubmitHandler);
 
-//Слушатели событий карточки
+// Слушатели событий карточки
 addUsersCardButton.addEventListener('click', () => {
   document.querySelector('.inputform_card').reset();
   cleanInputError(settingCardPopup);
-  resetButtonState(settingCardPopup);
+  validationFormAdd.setButtonState(false);
   openPopup(settingCardPopup);
 });
 closeCardPopupButton.addEventListener('click', function() {
@@ -171,3 +147,13 @@ closeImgPopupButton.addEventListener('click', () => {
   const openedPopup = document.querySelector('.popup_active');
   closePopup(openedPopup);
 });
+
+//заполнение из массива
+initialCards.forEach(cardInfo => {
+  const card = new Card(cardInfo, openFullscreenImage);
+  placesContainer.append(card.renderCard());
+});
+
+//Запуск валидации
+validationFormAdd.enableValidation();
+validationFormProfile.enableValidation();
