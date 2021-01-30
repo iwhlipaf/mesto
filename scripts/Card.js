@@ -15,7 +15,7 @@ export class Card {
     _setEventListenrs() {
         this._card.querySelector('.place__like').addEventListener('click', this._likingCard);
         this._card.querySelector('.place__delete-button').addEventListener('click', this._removingCard);
-        this._card.querySelector('.place__foto').addEventListener('click', (evt) => {
+        this._card.querySelector('.place__foto').addEventListener('click', () => {
             this._showImage({ name: this._name, link: this._link });
         });
     }

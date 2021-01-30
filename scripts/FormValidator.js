@@ -3,6 +3,7 @@ export default class FormValidator {
     this._config = config;
     this._form = document.querySelector(form);
     this._buttonSubmit = this._form.querySelector(this._config.submitButtonSelector);
+    this._inputList = this._form.querySelectorAll(this._config.inputsSelector);
   };
 
   //функция добавления класса ошибки
@@ -30,13 +31,8 @@ export default class FormValidator {
 
   //Функция очистки полей ввода от  ошибок после закрытии окна
   cleanInputError() {
-    const errorList = this._form.querySelectorAll('.error');
-    errorList.forEach(error => {
-      error.textContent = "";
-    });
-    const inputList = this._form.querySelectorAll('.inputform__field_state_invalid');
-    inputList.forEach(input => {
-      input.classList.remove('inputform__field_state_invalid');
+    this._inputList.forEach(input => {
+      this._hideError(input);
     });
   }
 
