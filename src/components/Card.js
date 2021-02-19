@@ -1,4 +1,4 @@
-export class Card {
+export default class Card {
     constructor({ name, link }, openFullscreenImage) {
         this._name = name;
         this._link = link;
@@ -21,7 +21,7 @@ export class Card {
     }
 
     //Создание карточки
-    renderCard() {
+    generateCard() {
         this._card = this._getTemplate();
         this._card.querySelector('.place__placename').textContent = this._name;
         this._card.querySelector('.place__foto').src = this._link;

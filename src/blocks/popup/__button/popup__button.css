@@ -1,4 +1,4 @@
-.popup-fullscreen__close-button {
+.popup__button {
     align-self: flex-end;
     padding: 0;
     width: 47px;
@@ -10,7 +10,15 @@
     background-color: transparent;
   }
 
-  .popup-fullscreen__close-button:hover {
-    opacity: 0.6;
-    cursor: pointer;
+.popup__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__button {
+    position: static;
+    display: flex;
+    justify-content: center;
   }
+}
