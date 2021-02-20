@@ -1,22 +1,22 @@
-.popup__button {
+.popup-button {
     align-self: flex-end;
     padding: 0;
     width: 47px;
     height: 47px;
-    background-image: url(../../../images/CloseIcon.svg);
+    background-image: url(../../images/CloseIcon.svg);
     background-position: center center;
     background-size: cover;
     border: 0;
     background-color: transparent;
   }
 
-.popup__button:hover {
+.popup-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 680px) {
-  .popup__button {
+  .popup-button {
     position: static;
     display: flex;
     justify-content: center;
