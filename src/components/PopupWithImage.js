@@ -1,13 +1,17 @@
 import Popup from './Popup.js';
 
 export default class PopupWithImage extends Popup {
-    open(data) {
-        const placeFoto = document.querySelector('.popup-fullscreen__img');
-        const placeName = document.querySelector('.popup-fullscreen__title');
-        placeFoto.src = data.link;
-        placeFoto.alt = "Фото";
-        placeName.textContent = data.placeName
+    constructor(popupSelector) {
+        super(popupSelector);
+        this._placeFoto = this._popup.querySelector('.popup-fullscreen__img');
+        this._placeName = this._popup.querySelector('.popup-fullscreen__title');
+    }
+    
+    openImage(data) {
+        this._placeFoto.src = data.link;
+        this._placeFoto.alt = "Фото";
+        this._placeName.textContent = data.placeName;
 
-        super.openPopup()
+        super.open();
     }
 }

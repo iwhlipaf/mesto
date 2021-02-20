@@ -6,14 +6,13 @@ export default class Popup {
     }
 
     //функция открытия окна
-    openPopup() {
+    open() {
         this._popup.classList.add('popup_active');
-        this._setEventListeners()
         this._handleEscClose();
     }
 
     //функция закрытия окна
-    closePopup() {
+    close() {
         this._popup.classList.remove('popup_active');
         this._unhandleEscClose();
     }
@@ -21,22 +20,29 @@ export default class Popup {
     //функция закрытия окна по Esc
     _closePopupByEsc = (evt) => {
         if (evt.key === 'Escape') {
-            this.closePopup();
+            this.close();
         };
     }
 
     //функция закрытия окна по Overlay
     _closePopupByOverlay = (evt) => {
         if (evt.target.classList.contains('popup_active')) {
-            this.closePopup();
+            this.close();
         };
     }
 
-    //функция добавления слушателя на кнопу Х
-    _setEventListeners() {
+    //функция добавления слушателей на кнопки
+    setEventListeners() {
         this._closeButton.addEventListener('click', () => {
-            this.closePopup();
+            this.close();
         });
+        if (this._popup.classList.contains('popup')) {
+            this._form = this._popup.querySelector('.inputform');
+            this._form.addEventListener('submit', (evt) => {
+                evt.preventDefault();
+                this._submitHandler(this._getInputValues());
+            });
+        }
     }
 
     //функция добавления слушателей по Esc и Overlay

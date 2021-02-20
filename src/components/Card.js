@@ -1,13 +1,14 @@
 export default class Card {
-    constructor({ name, link }, openFullscreenImage) {
+    constructor({ name, link }, template, openFullscreenImage) {
         this._name = name;
         this._link = link;
         this._showImage = openFullscreenImage;
+        this._template = document.querySelector(template);
     }
 
     //создание шаблона карточки
     _getTemplate() {
-        const cardsTemplate = document.querySelector('#card-template').content.cloneNode(true);
+        const cardsTemplate = this._template.content.cloneNode(true);
         return cardsTemplate;
     }
 
