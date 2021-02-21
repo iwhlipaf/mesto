@@ -4,7 +4,6 @@ export default class PopupWithForm extends Popup {
     constructor(popupSelector, submitHandler) {
         super(popupSelector);
         this._submitHandler = submitHandler;
-        this._form = this._popup.querySelector('.inputform');
     }
 
     _getInputValues() {
@@ -20,6 +19,16 @@ export default class PopupWithForm extends Popup {
         });
 
         return this._formValues;
+    }
+
+    //функция добавления слушателей на кнопки
+    setEventListeners() {
+        super.setEventListener(); 
+        this._form = this._popup.querySelector('.inputform'); 
+        this._form.addEventListener('submit', (evt) => {
+                evt.preventDefault();
+                this._submitHandler(this._getInputValues());
+        });
     }
 
     closeForm() {

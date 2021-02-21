@@ -31,18 +31,11 @@ export default class Popup {
         };
     }
 
-    //функция добавления слушателей на кнопки
-    setEventListeners() {
+    //функция добавления слушателя на кнопку Х
+    setEventListener() {
         this._closeButton.addEventListener('click', () => {
             this.close();
         });
-        if (this._popup.classList.contains('popup')) {
-            this._form = this._popup.querySelector('.inputform');
-            this._form.addEventListener('submit', (evt) => {
-                evt.preventDefault();
-                this._submitHandler(this._getInputValues());
-            });
-        }
     }
 
     //функция добавления слушателей по Esc и Overlay

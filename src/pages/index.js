@@ -45,7 +45,7 @@ cardList.renderItems();
 
 //окно открытия картинки на полный экран
 const popupImage = new PopupWithImage('.popup-fullscreen');
-popupImage.setEventListeners();
+popupImage.setEventListener();
 
 //функция открытия картинки на полный экран
 function openFullscreenImage(data) {
